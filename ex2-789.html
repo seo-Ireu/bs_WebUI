@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>tags</title>
+
+        <style media="screen">
+            td,th {border:1px solid;height:50px;width:100px;}
+        </style>
+    </head>
+    <body>
+        <!--
+            • <colgroup>: <colgroup> 태그는 테이블에서 서식 지정을 위해 하나 이상의 열을 그룹으로 묶을 때 사용합니다.
+                <colgroup> 요소는 각 행(row)이나 셀(cell)의 스타일을 반복하지 않고, 열(column) 전체에 다른 스타일을 적용하고 싶을 때 유용하게 사용할 수 있습니다.
+                또한, <colgroup> 요소 내부에 <col> 요소를 포함하여 열마다 각각 다른 스타일을 적용할 수도 있습니다.
+                <colgroup> 요소는 <table> 요소의 자식 요소로, 모든 <caption> 요소보다 뒤에 위치해야 하며 모든 <thead>, <tbody>, <tfoot>, <tr> 요소보다는 앞에 위치해야 합니다.
+
+            • <col>
+
+            • scope 속성: Providing a declaration of `scope="col"` on a `<th>` element will help describe that the cell is at the top of a column.
+                Providing a declaration of `scope="row"` on a `<th>` element will help describe that the cell is the first in a row.
+
+            • header 속성: This attribute contains a list of space-separated strings,
+                each corresponding to the **id** attribute of the '<th>' elements that apply to this element.
+                <td header="product" id="pc">이면 음성 인식할 때 product > pc 순으로 출력됨 
+                    
+            • summary 속성: 음성 프로그램으로 현재의 웹페이지를 출력하게 된다면 그 때 음성으로 전달하게 되는 요소
+                <table summary="상하반기 태블릿 PC와 스마트폰 판매현황">
+        -->
+        <img src="./images/AI3.jpg" alt="에이아이" height="300">
+
+
+        <table>
+            <caption>Monthly Savings</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr><td colspan="2">Sum</td></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>January</td><td>$100</td></tr>
+                <tr><td>February</td><td rowspan="2">$80</td></tr>
+                <tr><td>March</td></tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Specification values</caption>
+            <thead>
+                <tr><th rowspan="2">Grade.</th><th rowspan="2">Point</th><th colspan="2">Strength.</th><th rowspan="2">Percent.</th></tr>
+                <tr><th>kg/mm</th><th>lb/in</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hard</td><td>0.45</td><td>56.2</td><td>80,000</td><td>20</td>
+                </tr>
+                <tr>
+                    <td>Medium</td><td>0.45</td><td>49.2</td><td>70,000</td><td>25</td>
+                </tr>
+                <tr>
+                    <td>Soft</td><td>0.45</td><td>42.2</td><td>60,000</td><td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
