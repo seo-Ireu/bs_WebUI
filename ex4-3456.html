@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS</title>
+        <style>
+            .c1{color:indigo;}
+            .c2{background-color:indigo;}
+            #selecter{
+                color:greenyellow;
+            }
+
+            p[class]{
+                color:silver;
+            }
+            p[class][id]{
+                text-decoration:underline;
+            }
+            p[class~="color"]{font-style: italic;}
+            p[class^="color"]{font-style:unset;}/*--공백 구분 X "colorful ..." 이런 것도 가능 */
+            p[class$="color"]{font-style: italic;}
+            p[class*="color"]{font-stretch: extra-expanded;}
+            div span{color:tomato;}
+            div > span{color:blue;}
+            div + p {color:sienna;}
+
+            p + .list .i2{color:blue;}
+        </style>
+
+    </head>
+    <body>
+        <dl>
+            <dt class="c1">HTML</dt>
+            <dd><span class="c1">HTML</span>은 문서의 구조를 나타냅니다.</dd>
+
+            <dt class="c2">CSS</dt>
+            <dd><span class="c2">CSS</span>는 문서의 표현을 나타냅니다.</dd>
+        
+            <dt >CSS</dt>
+            <dd><span id="selecter">CSS</span>는 문서의 동작을 나타냅니다.</dd>
+        </dl>
+
+        <p class="foo">Hello</p>
+        <p class="bar">World</p>
+        <p class="baz" id="title">HTML</p>
+
+        <br>
+        <p class="color hot">red</p>
+        <p class="cool color">blue</p>
+        <p class="colorful nature">rainbow</p>
+
+
+        <br>
+        <div>
+            <h1><span>HTML</span>: Hyper Text Markup Language</h1>
+            <span>CSS는 문서를 꾸며줍니다.</span>
+        </div>
+        <p>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.</p>
+
+        <div class="wrap">
+
+            <strong> title </strong>
+            <p> description </p>
+            <!--
+                strong+ .list .i2 선택자는 안됨.
+                인접하지 않아서 인접 형제 선택자를 사용하고 싶은 경우,
+                p+ .list .i2
+            -->
+            <ul class="list">
+                <li class="item i1"> item 1 </li>  
+                <li class="item i2"> item 2 </li>  
+                <li class="item i3"> item 3 </li>
+            </ul>
+        </div>
+    </body>
+</html>
