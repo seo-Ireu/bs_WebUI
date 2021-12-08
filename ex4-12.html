@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS</title>
+        <style>
+            p{
+                background-color: purple;
+                color: greenyellow;
+            }
+        </style>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--
+            • CSS(Cascading Style Sheets)
+                HTML(마크업 언어)를 꾸며주는 언어
+                html이 웹페이지 정보를 표현한다면, CSS는 html을 보기 좋게 디자인 하는 역할
+                주석: /*....*/
+                
+                적용 방식
+                1. Inline: 수정하기 번거롭다.
+                2. Internal: 많은 페이지에 동일한 스타일을 적용시키기 번거롭다.
+                3. External: 보통 많이 쓰이는 방식
+                4. @import: @import.url("주소") 형식 별로 안쓰인다.
+        -->
+        <p style="color: skyblue;">Hello, CSS! <strong>this is Inline style.</strong></p>
+        
+        <p><strong>this is Internal style!</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fugit quaerat consectetur fuga molestias officia labore officiis. 
+            Magnam perferendis adipisci assumenda sapiente nobis. Itaque quidem, 
+            minus quam odio sint dolorum officiis.
+        </p>
+
+        <div><strong>this is External style!</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Fugit quaerat consectetur fuga molestias officia labore officiis. 
+            Magnam perferendis adipisci assumenda sapiente nobis. Itaque quidem, 
+            minus quam odio sint dolorum officiis.
+        </div>
+    </body>
+</html>
