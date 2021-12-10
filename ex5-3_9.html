@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>color</title>
+
+  <style>
+    div {
+      height: 500px;
+      background-color: yellow;
+      background-image: url(https://www.w3schools.com/CSSref/img_tree.gif);
+      background-repeat: no-repeat;
+      background-position: center top;
+      /* 축약형 */
+      background: yellow url(https://www.w3schools.com/CSSref/img_tree.gif) no-repeat center center;
+    }
+    #box1{
+        margin:500px;
+        padding:1px;
+        border:10px solid #000;
+        height:100px;
+    }
+    #border1{
+        border-width: 10px;
+        border-style: solid;
+        border-color: #000 #f00 #0f0 #00f;
+    }
+  </style>
+
+</head>
+<body>
+
+    <h1 style="color: blue"> heading </h1>
+    <h1 style="color: #0000ff"> heading </h1>
+    <h1 style="color: #00f"> heading </h1>
+    <h1 style="color: rgb(0,0,255)"> heading </h1>    
+    <h1 style="color: rgba(0,0,255, 1)"> heading </h1>
+    <h1 style="color: rgba(0,0,255, 0.75)"> heading </h1>
+    <h1 style="color: rgba(0,0,255, 0.5)"> heading </h1>
+    <h1 style="color: rgba(0,0,255, 0.25)"> heading </h1>
+
+    <div> css background 속성 실습 </div>
+
+    <div id="box1">박스 모델에 대하여 알아봅시다</div>
+
+    <div id="border1" >css border 속성 실습 </div>
+</body>
+</html>
