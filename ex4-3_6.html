@@ -29,6 +29,24 @@
 
     </head>
     <body>
+        <!--    
+            • 선택자
+                1. 요소 선택자
+                2. class 선택자
+                3. id 선택자
+                4. 부분 속성값 선택자
+                    a. [class~="bar"]: class 속성의 값이 공백으로 구분한 "bar"단어가 포함되는 요소 선택
+                    b. [class^="bar"]: class 속성의 값이 "bar"로 시작하는 요소 선택
+                    c. [class$="bar"]: class속성의 값이 "bar"로 끝나는 요소 선택
+                    d. [class*="bar"]: class 속성의 값이 "bar"문자가 포함되는 요소 선택
+                5. 문서 구조를 이용한 선택자
+                    a. 자손 선택자: div span {color:red;}
+                    b. 자식 선택자: div > span{color:red;}
+                    c. 인접 형제 선택자: div + span {color:red;}
+
+                    ex) body>div table + ul{...}
+                    ⇒body의 자식이고 div의 자손이고 table의 인접형제 선택자 <ul>
+        -->
         <dl>
             <dt class="c1">HTML</dt>
             <dd><span class="c1">HTML</span>은 문서의 구조를 나타냅니다.</dd>
