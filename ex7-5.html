@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>position</title>
+  <style>
+    .sibling {
+      padding: 5px;
+      background-color: #eee;
+      text-align: center;
+    }
+
+    .parent {
+      border: 1px dashed #aaa;
+      padding: 10px;
+    }
+
+    .child,
+    .child_offset {
+      width: 60px;
+      height: 60px;
+      padding: 20px;
+      background-color: #dc3636;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #333;
+    }
+
+    .child_offset {
+      background-color: #3677dc;
+    }
+
+    .static {
+      position: static;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .static {
+      position: static;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+  </style>
+</head>
+<body>
+    <!--
+        • position: static | absolute | fixed | relative | sticky | initial | inherit
+            - static: Noraml-flow에 따라 배치되며 offset 값이 적용 되지 않음(default)
+            - absolute: 부모 요소의 위치를 기준으로 offset값이 적용(부모의 padding부터)
+                        부모의 position이 static이 아니여야 적용되며, 만약 static이라면 static이 아닌 조상까지 거슬러 올라가서 기준을 삼음
+            - fixed: 뷰포트(브라우저의 창)을 기준으로 offset이 적용됨. 부모의 위치에 영향 X
+            - relative: 자신이 원래 있어야 할 위치를 기준으로 offset이 적용됨.부모의 position에 영향 X
+        
+            • offset: top | bottom | right:auto | length | initial | inherit
+            padding과 margin에서 % 값을 적용할 때, 상하좌우 방향에 관계없이 가로 사이즈를 기준으로 %값을 계산된다고 배웠습니다.
+            그러나 offset은 top, bottom (상하)는 기준이 되는 요소의 height 값 left, right (좌우)는 width값에 대하여 계산되어집니다.
+        -->
+  <h1>position (Offset 지정)</h1>
+  <h2>static - </h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset static" style="top: 40px; right: 40px;">static <br>top: 40, left: 40</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>relative</h2>
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset relative" style="top: 40px; left: 40px;">relative <br>top: 40, left: 40</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>absolute - parent relative</h2>
+  <div class="parent relative">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset absolute" style="top: 40px; left: 40px;">absolute<br>top: 40, left: 80</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+
+  <h2>fixed</h2>
+  <!-- 부모가 fixed여도 별개로 위치함 -->
+  <div class="parent">
+    <div class="sibling">Sibling 1</div>
+    <div class="child_offset fixed" style="top:100px;left:80%;">fixed<br>top:100, left:80%</div>
+    <div class="sibling">Sibling 2</div>
+  </div>
+</body>
+</html>
