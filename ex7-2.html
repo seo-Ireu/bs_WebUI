@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <style>
+      .box{background-color: yellow;}
+      .hidden{visibility: hidden;}
+      .none{display:none;}
+  </style>
+</head>
+<body>
+    <!--
+        • Visibility 속성은 visible(✔) | hidden(✔) | collapse | initial | inherit
+
+        • visibility:hidden과 display:none의 차이점:
+        hidden은 요소가 보이진 않지만 실제로 공간은 차지하고 있고(렌더링 되며 화면에 공간을 가지고 있음-DOM에 존재함)
+        none은 요소가 보이지 않고 공간 차지 하지 않음(요소가 렌더링 되지 않음 - DOM에 존재하지 않음)
+    -->
+    <h3>This is Visibility:hidden</h3>
+    <div class="hidden">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+      </div>
+
+      <h3>This is Display:none</h3>
+      <div class="none">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+      </div>
+
+</body>
+</html>
